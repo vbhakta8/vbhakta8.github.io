@@ -25,53 +25,90 @@
     }
 
     .logo {
-        flex: 1;
+        flex: 3;
+        display: table-cell;
     }
+        .logo > span:hover {
+            cursor: pointer;
+        }
     .title {
-        font-size: 20px;
-        color: lightblue;
+        font-size: 34px;
+        color: #13B1B4;
         padding-left: 10px;
+        font-weight: bold;
+        vertical-align: middle;
     }
+        
 
     #header-div {
         position: fixed;
         max-width: none !important;
         width: 97%;
         padding: 0px;
-        background-color: darkblue;
+        background-color: white;
         display: flex;
         top: 0;
         left: 0;
         z-index: 1000;
-        box-shadow: 0px 5px 10px;
+        box-shadow: 0px 1px 10px;
     }
     
     #nav-menu-div {
         width: 100%;
-        text-align: right;
-
-        flex: 2;
+        text-align: center;
+        flex: 3;
     }
 
     #nav-menu-ul {
-        display: inline-block;
-    }
-
-    .nav {
+        display: flex;
         height: 100%;
     }
 
-    .nav-pills > li > a {
-        border-radius: 0px !important;
-        height: 100%;
-        vertical-align: middle;
-        color: lightblue;
+    .my-nav-pills > .li {
+        min-height: 100%;
+        height: 80px !important;
+        flex: 1;
+        /*border-left: solid;
+        border-color: #BDEDF1;
+        border-width: 1px;*/
+        /*display: table-cell;*/
     }
-        .nav-pills > li > a:hover {
-            background-color: #337ab7 !important;
+    .border {
+        content: "";
+        border-left: solid;
+        border-color: #BDEDF1;
+        border-width: 1px;
+        /*display: block;*/
+        height: 50%;
+        margin-top: 20px;
+    }
+        .my-nav-pills > .li > a {
+            display: inline-block;
+            /*display: table-cell;*/
+            border-radius: 0px !important;
+            /*height: 100% !important;*/
+            color: #13B1B4;
+            /*vertical-align: middle;*/
+            padding: 10px;
+            height: 80px;
+            width: 100%;
+            line-height: 60px;
+            font-size: 18px;
+        }
+            .my-nav-pills > .li > a > .pill-label {
+                /*vertical-align: middle;*/
+            }
+        .my-nav-pills > .li > a:hover {
+            background-color: #13B1B4 !important;
+            color: white;
+            text-decoration: none;
+        }
+        .my-nav-pills > .li.active > a {
+            background-color: #13B1B4 !important;
+            color: white;
         }
 
-    .nav-pills > li {
+    .my-nav-pills > .li {
         height: 100%;
         display: table-cell;
     }
@@ -89,8 +126,8 @@
 
     .item {
         width: auto;
-        height: 500px;
-        max-height: 500px;
+        height: 700px;
+        max-height: 700px;
     }
 
     #carousel-div {
@@ -98,6 +135,7 @@
         border-color: gray;
         border-bottom-width: 2px;
         /*border-radius: 10px;*/
+        max-height: 700px;
         
     }
     #carousel-image {
@@ -107,7 +145,15 @@
         /*position: relative;
         z-index: -1;*/
     }
-
+    .leftish {
+        position: absolute;
+        top: 40%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        font-size: 70px;
+        color: white;
+        text-shadow: 2px 2px 10px black;
+    }
     .content-row {
         display: flex;
         padding: 50px;
@@ -115,12 +161,13 @@
         padding-right: 10%;
         font-size: 20px;
     }
-    .content-row:nth-child(odd){
-        background-color:aliceblue;
-    }
+        .content-row:nth-child(odd) {
+            background-color: #f5fcfd;
+        }
     .raised-card {
-        box-shadow: 8px 8px 20px darkgray;
+        box-shadow: 4px 4px 20px 1px darkgray;
         border-radius: 5px;
+        display: table-cell;
     }
     .flex {
         display: flex;
@@ -130,38 +177,50 @@
         text-align: center;
         font-size: 40px;
         font-weight: bold;
-        background-color: lightblue;
+        background-color: #BDEDF1;
         padding: 10px;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
+        vertical-align: middle;
     }
     #mission-content {
         flex: 3;
         padding: 10px;
         border: solid;
-        border-color: lightblue;
+        border-color: #BDEDF1;
         border-width: 5px;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
     }
     .clickable-card {
         flex: 1;
-        padding: 10px;
-        border: solid;
+        margin: 15px;
+        /*border: solid;
         border-width: 2px;
-        border-color: transparent;
+        border-color: transparent;*/
+        box-shadow: 4px 4px 20px 1px darkgray;
     }
-    .clickable-card:hover {
-        border-color: lightblue;
-        cursor: pointer;
-    }
+        .clickable-card:hover {
+            border-color: #BDEDF1;
+            cursor: pointer;
+            box-shadow: 4px 4px 20px 4px darkgray;
+        }
     .card-header {
-        background-color: lightblue;
+        background-color: #BDEDF1;
         padding: 10px;
         font-weight: bold;
     }
     .card-body {
         padding: 10px;
+    }
+
+    .image-div {
+        width: 100%;
+        max-height: 250px;
+        overflow: hidden;
+    }
+    .image {
+        max-width: 100%;
     }
 
 </style>
@@ -180,18 +239,24 @@
     <div class="container" id="overall-container">
         <div class="container" id="header-div">
             <div class="logo">
-                <span><img width="60" height="60" src="Images/logo.jpg" alt="DBS Logo"></span>
+                <span><img width="80" height="80" src="Images/logo.jpg" alt="DBS Logo"></span>
                 <span class="title">Dive Beneath the Surface</span>
             </div>
             <div id="nav-menu-div">
-                <ul class="nav nav-pills" id="nav-menu-ul">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="Background/Index.html">Background</a></li>
-                    <li><a href="LessonPlans/Index.html">Lesson Plans</a></li>
-                    <li><a href="Events/Index.html">Events</a></li>
-                    <li><a href="Videos/Index.html">Videos</a></li>
-                    <li><a href="Contact/Index.html">Contact</a></li>
-                </ul>
+                <div class="my-nav my-nav-pills" id="nav-menu-ul">
+                    <div class="border"></div>
+                    <div class="li active"><a href="#">Home</a></div>
+                    <div class="border"></div>
+                    <div class="li"><a href="LessonPlans/Index.html"><span class="pill-label">Lessons</span></a></div>
+                    <div class="border"></div>
+                    <div class="li"><a href="Events/Index.html"><span class="pill-label">Events</span></a></div>
+                    <div class="border"></div>
+                    <div class="li"><a href="Videos/Index.html"><span class="pill-label">Videos</span></a></div>
+                    <div class="border"></div>
+                    <div class="li"><a href="Background/Index.html"><span class="pill-label">About</span></a></div>
+                    <div class="border"></div>
+                    <div class="li"><a href="Contact/Index.html"><span class="pill-label">Contact</span></a></div>
+                </div>
             </div>
         </div>
 
@@ -206,13 +271,14 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item item active">
-                            <img class="d-block w-100 carousel-image" width="10000" height="10000" src="Images/stock1.jpg" alt="First slide">
+                            <img class="d-block w-100 carousel-image" width="10000" height="10000" src="Images/lots_of_fish.jpg" alt="First slide">
+                            <div class="leftish">Welcome to Cal Poly's <br />Dive Beneath the Surface!</div>
                         </div>
                         <div class="carousel-item item">
-                            <img class="d-block w-100 carousel-image" src="Images/stock4.jpg" alt="Second slide">
+                            <img class="d-block w-100 carousel-image" src="Images/sea_urchin.jpg" alt="Second slide">
                         </div>
                         <div class="carousel-item item">
-                            <img class="d-block w-100 carousel-image" src="Images/stock3.jpg" alt="Third slide">
+                            <img class="d-block w-100 carousel-image" src="Images/above_water.jpg" alt="Third slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -245,6 +311,9 @@
 
             <div class="content-row">
                 <div class="clickable-card">
+                    <div class="image-div">
+                        <img class="image" src="Images/children_in_scuba.JPG" alt="Horned Shark">
+                    </div>
                     <div class="card-header">
                         NGSS Lesson Plans
                     </div>
@@ -259,6 +328,9 @@
                     </div>
                 </div>
                 <div class="clickable-card">
+                    <div class="image-div">
+                        <img class="image" src="Images/scuba_in_kelp.JPG" alt="Horned Shark">
+                    </div>
                     <div class="card-header">
                         SCUBA Experience
                     </div>
@@ -272,6 +344,9 @@
                     </div>
                 </div>
                 <div class="clickable-card">
+                    <div class="image-div">
+                        <img class="image" src="Images/3_divers.JPG" alt="Horned Shark">
+                    </div>
                     <div class="card-header">
                         Engineering
                     </div>
