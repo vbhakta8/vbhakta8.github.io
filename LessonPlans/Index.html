@@ -7,34 +7,211 @@
 
     <meta charset="utf-8" />
     <title>DBS Website</title>
+
+    <link rel="stylesheet" type="text/css" href="../style.css" />
 </head>
 
-<style>
-    #nav-menu-div {
-        width: 100%;
-        text-align: center;
+<script>
+     function lesson1() {
+        window.location.href = "../Files/DBS Lesson 1.pdf";
+    }
+    function lesson2() {
+        window.location.href = "../Files/DBS Lesson 2.pdf";
+    }
+    function lesson3() {
+        window.location.href = "../Files/DBS Lesson 3.pdf";
+    }
+    function lesson4() {
+        window.location.href = "../Files/DBS Lesson 4.pdf";
     }
 
-    #nav-menu-ul {
-        display: inline-block;
+    function lessonPlans() {
+        window.location.href = "../Files/DBS Lesson Plans.zip";
+
     }
-</style>
+
+
+</script>
 
 <body>
-    <div class="container" id="header-div">
-        <div id="header-div">
 
+    <div class="container" id="overall-container">
+        <div class="container" id="header-div">
+            <div class="logo">
+                <span><img width="80" height="80" src="../Images/logo.jpg" alt="DBS Logo"></span>
+                <span class="title">Dive Beneath the Surface</span>
+            </div>
+            <div id="nav-menu-div">
+                <div class="my-nav my-nav-pills" id="nav-menu-ul">
+                    <div class="border"></div>
+                    <div class="li"><a href="../Index.html">Home</a></div>
+                    <div class="border"></div>
+                    <div class="li active"><a href="#"><span class="pill-label">Lessons</span></a></div>
+                    <div class="border"></div>
+                    <div class="li"><a href="../Events/Index.html"><span class="pill-label">Events</span></a></div>
+                    <div class="border"></div>
+                    <div class="li"><a href="../Videos/Index.html"><span class="pill-label">Videos</span></a></div>
+                    <div class="border"></div>
+                    <div class="li"><a href="../Background/Index.html"><span class="pill-label">About</span></a></div>
+                    <div class="border"></div>
+                    <div class="li"><a href="../Contact/Index.html"><span class="pill-label">Contact</span></a></div>
+                </div>
+            </div>
         </div>
-        <div id="nav-menu-div">
-            <ul class="nav nav-pills" id="nav-menu-ul">
-                <li><a href="../Index.html">Home</a></li>
-                <li><a href="../Background/Index.html">Background</a></li>
-                <li class="active"><a href="#">Lesson Plans</a></li>
-                <li><a href="../Events/Index.html">Events</a></li>
-                <li><a href="../Videos/Index.html">Videos</a></li>
-                <li><a href="../Contact/Index.html">Contact</a></li>
-            </ul>
+
+        <div class="container" id="content-div">
+
+            <div class="header-image-div">
+                <img class="header-image" src="../Images/learning3.jpg" alt="First slide">
+                <div class="center translucent-bg my-dark-blue-text dark-blue-translucent-bg">
+                    <div class="large-font">Lesson Plans</div>
+                    <button class="btn btn-DBS shadow" style="margin-bottom: 30px; font-size: 28px;" onclick="lessonPlans()">Download All Lesson Plans</button>
+                </div>
+            </div>
+
+            <div class="content-row">
+                <div class="clickable-card flex" onclick="lesson1()">
+                    <div class="lesson-header">
+                        <div class="image-div">
+                            <img class="image" src="../Images/children_in_scuba.JPG" alt="Horned Shark">
+                            <div class="translucent-bg top-center my-dark-blue-text dark-blue-translucent-bg" style="font-size: 48px; text-shadow: 1px 1px 6px black; color: white;">
+                                Lesson 1
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson-content" id="lesson1">
+                        Description for the 1st lesson.
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-row">
+                <div class="clickable-card flex" onclick="lesson2()">
+                    <div class="lesson-header">
+                        <div class="image-div">
+                            <img class="image" src="../Images/children_in_scuba.JPG" alt="Horned Shark">
+                            <div class="translucent-bg top-center my-dark-blue-text dark-blue-translucent-bg" style="font-size: 48px; text-shadow: 1px 1px 6px black; color: white;">
+                                Lesson 2
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson-content" id="lesson1">
+                        Description for the 2nd lesson.
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-row">
+                <div class="clickable-card flex" onclick="lesson3()">
+                    <div class="lesson-header">
+                        <div class="image-div">
+                            <img class="image" src="../Images/children_in_scuba.JPG" alt="Horned Shark">
+                            <div class="translucent-bg top-center my-dark-blue-text dark-blue-translucent-bg" style="font-size: 48px; text-shadow: 1px 1px 6px black; color: white;">
+                                Lesson 3
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson-content" id="lesson1">
+                        Description for the 3rd lesson.
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-row">
+                <div class="clickable-card flex" onclick="lesson4()">
+                    <div class="lesson-header">
+                        <div class="image-div">
+                            <img class="image" src="../Images/children_in_scuba.JPG" alt="Horned Shark">
+                            <div class="translucent-bg top-center my-dark-blue-text dark-blue-translucent-bg" style="font-size: 48px; text-shadow: 1px 1px 6px black; color: white;">
+                                Lesson 4
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lesson-content" id="lesson1">
+                        Description for the 4th lesson.
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-row flex">
+                <div class="col-md-6">
+                    <div class="clickable-card" onclick="lesson1()">
+                        <div class="lesson-header">
+                            <div class="image-div">
+                                <img class="image" src="../Images/children_in_scuba.JPG" alt="Horned Shark">
+                                <div class="translucent-bg top-center my-dark-blue-text dark-blue-translucent-bg" style="font-size: 48px; text-shadow: 1px 1px 6px black; color: white;">
+                                    Lesson 1
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lesson-content">
+                            Description for the 1st lesson.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="clickable-card" onclick="lesson2()">
+                        <div class="lesson-header">
+                            <div class="image-div">
+                                <img class="image" src="../Images/children_in_scuba.JPG" alt="Horned Shark">
+                                <div class="translucent-bg top-center my-dark-blue-text dark-blue-translucent-bg" style="font-size: 48px; text-shadow: 1px 1px 6px black; color: white;">
+                                    Lesson 2
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lesson-content">
+                            Description for the 2nd lesson.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-row flex">
+                <div class="col-md-6">
+                    <div class="clickable-card" onclick="lesson3()">
+                        <div class="lesson-header">
+                            <div class="image-div">
+                                <img class="image" src="../Images/children_in_scuba.JPG" alt="Horned Shark">
+                                <div class="translucent-bg top-center my-dark-blue-text dark-blue-translucent-bg" style="font-size: 48px; text-shadow: 1px 1px 6px black; color: white;">
+                                    Lesson 3
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lesson-content">
+                            Description for the 3rd lesson.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="clickable-card" onclick="lesson4()">
+                        <div class="lesson-header">
+                            <div class="image-div">
+                                <img class="image" src="../Images/children_in_scuba.JPG" alt="Horned Shark">
+                                <div class="translucent-bg top-center my-dark-blue-text dark-blue-translucent-bg" style="font-size: 48px; text-shadow: 1px 1px 6px black; color: white;">
+                                    Lesson 4
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lesson-content">
+                            Description for the 4th lesson.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <hr />
+            Copyright - DBS 2018
         </div>
     </div>
-    <div>Lesson Plans</div>
+
+
 </body>
+
+
+<!--<script>
+    $(function () {
+        $("#header-div").load("Header.html");
+    });
+</script>-->
