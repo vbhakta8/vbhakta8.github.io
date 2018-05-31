@@ -7,232 +7,15 @@
 
     <meta charset="utf-8" />
     <title>DBS Website</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
-
-<style>
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    #overall-container {
-        /*background-color: darkcyan;*/
-
-        padding: 0px;
-    }
-
-    .container {
-        max-width: none !important;
-        width: 100% !important;
-    }
-
-    .logo {
-        flex: 3;
-        display: table-cell;
-    }
-        .logo > span:hover {
-            cursor: pointer;
-        }
-    .title {
-        font-size: 34px;
-        color: #13B1B4;
-        padding-left: 10px;
-        font-weight: bold;
-        vertical-align: middle;
-    }
-        
-
-    #header-div {
-        position: fixed;
-        max-width: none !important;
-        width: 97%;
-        padding: 0px;
-        background-color: white;
-        display: flex;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-        box-shadow: 0px 1px 10px;
-    }
-    
-    #nav-menu-div {
-        width: 100%;
-        text-align: center;
-        flex: 3;
-    }
-
-    #nav-menu-ul {
-        display: flex;
-        height: 100%;
-    }
-
-    .my-nav-pills > .li {
-        min-height: 100%;
-        height: 80px !important;
-        flex: 1;
-        /*border-left: solid;
-        border-color: #BDEDF1;
-        border-width: 1px;*/
-        /*display: table-cell;*/
-    }
-    .border {
-        content: "";
-        border-left: solid;
-        border-color: #BDEDF1;
-        border-width: 1px;
-        /*display: block;*/
-        height: 50%;
-        margin-top: 20px;
-    }
-        .my-nav-pills > .li > a {
-            display: inline-block;
-            /*display: table-cell;*/
-            border-radius: 0px !important;
-            /*height: 100% !important;*/
-            color: #13B1B4;
-            /*vertical-align: middle;*/
-            padding: 10px;
-            height: 80px;
-            width: 100%;
-            line-height: 60px;
-            font-size: 18px;
-        }
-            .my-nav-pills > .li > a > .pill-label {
-                /*vertical-align: middle;*/
-            }
-        .my-nav-pills > .li > a:hover {
-            background-color: #13B1B4 !important;
-            color: white;
-            text-decoration: none;
-        }
-        .my-nav-pills > .li.active > a {
-            background-color: #13B1B4 !important;
-            color: white;
-        }
-
-    .my-nav-pills > .li {
-        height: 100%;
-        display: table-cell;
-    }
-
-    #content-div {
-        /*border: solid;
-        border-width: 2px;
-        border-color: cornflowerblue;*/
-        padding: 0px;
-    }
-
-    #footer {
-        padding-top: 20px;
-    }
-
-    .item {
-        width: auto;
-        height: 700px;
-        max-height: 700px;
-    }
-
-    #carousel-div {
-        border: solid;
-        border-color: gray;
-        border-bottom-width: 2px;
-        /*border-radius: 10px;*/
-        max-height: 700px;
-        
-    }
-    #carousel-image {
-        /*border-radius: 20px;*/
-        width: 100px;
-        height: 100px;
-        /*position: relative;
-        z-index: -1;*/
-    }
-    .leftish {
-        position: absolute;
-        top: 40%;
-        left: 30%;
-        transform: translate(-50%, -50%);
-        font-size: 70px;
-        color: white;
-        text-shadow: 2px 2px 10px black;
-    }
-    .content-row {
-        display: flex;
-        padding: 50px;
-        padding-left: 10%;
-        padding-right: 10%;
-        font-size: 20px;
-    }
-        .content-row:nth-child(odd) {
-            background-color: #f5fcfd;
-        }
-    .raised-card {
-        box-shadow: 4px 4px 20px 1px darkgray;
-        border-radius: 5px;
-        display: table-cell;
-    }
-    .flex {
-        display: flex;
-    }
-    #mission-label {
-        flex: 1;
-        text-align: center;
-        font-size: 40px;
-        font-weight: bold;
-        background-color: #BDEDF1;
-        padding: 10px;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-        vertical-align: middle;
-    }
-    #mission-content {
-        flex: 3;
-        padding: 10px;
-        border: solid;
-        border-color: #BDEDF1;
-        border-width: 5px;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-    }
-    .clickable-card {
-        flex: 1;
-        margin: 15px;
-        /*border: solid;
-        border-width: 2px;
-        border-color: transparent;*/
-        box-shadow: 4px 4px 20px 1px darkgray;
-    }
-        .clickable-card:hover {
-            border-color: #BDEDF1;
-            cursor: pointer;
-            box-shadow: 4px 4px 20px 4px darkgray;
-        }
-    .card-header {
-        background-color: #BDEDF1;
-        padding: 10px;
-        font-weight: bold;
-    }
-    .card-body {
-        padding: 10px;
-    }
-
-    .image-div {
-        width: 100%;
-        max-height: 250px;
-        overflow: hidden;
-    }
-    .image {
-        max-width: 100%;
-    }
-
-</style>
 
 <script>
     $(function () {
         $('#carouselExampleIndicators').carousel();
     });
 </script>
-
-
-
 
 <body>
 
@@ -310,50 +93,53 @@
             </div>
 
             <div class="content-row">
-                <div class="clickable-card">
-                    <div class="image-div">
-                        <img class="image" src="Images/children_in_scuba.JPG" alt="Horned Shark">
+                <div class="card-container">
+                    <div class="clickable-card">
+                        <div class="image-div">
+                            <img class="image" src="Images/children_in_scuba.JPG" alt="Horned Shark">
+                        </div>
+                        <div class="card-header">
+                            NGSS Lesson Plans
+                        </div>
+                        <div class="card-body">
+                            Building on the Next Generation Science Standards
+                            Disciplinary Core Idea “Structure, Function, and Information Processing”,
+                            the Dive Beneath the Surface program uses the marine environment and
+                            organisms -- and live interactive SCUBA diving with your classroom -- to
+                            teach 4th graders to “construct an argument that plants and animals have
+                            internal and external structures that function to support survival, growth,
+                            behaviour, and reproduction (NGSS Performance Expectation 4-LS1- 1).”
+                        </div>
                     </div>
-                    <div class="card-header">
-                        NGSS Lesson Plans
+                    <div class="clickable-card">
+                        <div class="image-div">
+                            <img class="image" src="Images/scuba_in_kelp.JPG" alt="Horned Shark">
+                        </div>
+                        <div class="card-header">
+                            SCUBA Experience
+                        </div>
+                        <div class="card-body">
+                            Led by a team of Cal Poly students and faculty, this
+                            underwater experience will allow elementary school students to "dive
+                            beneath the surface." In our 4 lesson series, lesson 3 is an interactive, 30
+                            minute SCUBA dive in the ocean along the California central coast
+                            observing and discussing the structures and functions of the marine
+                            organisms featured in lesson plans 1 and 2.
+                        </div>
                     </div>
-                    <div class="card-body">
-                        Building on the Next Generation Science Standards
-                        Disciplinary Core Idea “Structure, Function, and Information Processing”,
-                        the Dive Beneath the Surface program uses the marine environment and
-                        organisms -- and live interactive SCUBA diving with your classroom -- to
-                        teach 4th graders to “construct an argument that plants and animals have
-                        internal and external structures that function to support survival, growth,
-                        behaviour, and reproduction (NGSS Performance Expectation 4-LS1- 1).”
+                    <div class="clickable-card">
+                        <div class="image-div">
+                            <img class="image" src="Images/3_divers.JPG" alt="Horned Shark">
+                        </div>
+                        <div class="card-header">
+                            Engineering
+                        </div>
+                        <div class="card-body">
+                            Engineering Summary
+                        </div>
                     </div>
                 </div>
-                <div class="clickable-card">
-                    <div class="image-div">
-                        <img class="image" src="Images/scuba_in_kelp.JPG" alt="Horned Shark">
-                    </div>
-                    <div class="card-header">
-                        SCUBA Experience
-                    </div>
-                    <div class="card-body">
-                        Led by a team of Cal Poly students and faculty, this
-                        underwater experience will allow elementary school students to "dive
-                        beneath the surface." In our 4 lesson series, lesson 3 is an interactive, 30
-                        minute SCUBA dive in the ocean along the California central coast
-                        observing and discussing the structures and functions of the marine
-                        organisms featured in lesson plans 1 and 2.
-                    </div>
-                </div>
-                <div class="clickable-card">
-                    <div class="image-div">
-                        <img class="image" src="Images/3_divers.JPG" alt="Horned Shark">
-                    </div>
-                    <div class="card-header">
-                        Engineering
-                    </div>
-                    <div class="card-body">
-                        Engineering Summary
-                    </div>
-                </div>
+
             </div>
 
         </div>
